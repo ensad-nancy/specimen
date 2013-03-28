@@ -1,0 +1,82 @@
+@import "gui";
+@import "baseline.reset.less";
+@col:#ff4747;
+@g : 10px;
+
+body {
+  padding:10*@g 2*@g 0 2*@g;
+
+}
+a {
+  color:@col;
+  text-decoration:none;
+}
+h1 {
+  font-size:2em;
+  font-weight:bold;
+  padding: 0 0 @g;
+}
+hr { border-top:@col 1px solid}
+li { list-style:none;
+}
+header {
+  width:200px;
+  
+  position:absolute;
+  
+  top:@g;
+  right:@g;
+  
+  z-index:800;
+  
+  padding:@g;
+  sup {
+    font-size:0.4em;
+  }
+  &:hover {
+    .survol
+  }
+  
+  nav {
+    border-top: 1px solid @col;
+    padding: @g 0;
+    
+    li {
+      display:inline;
+      border-left: 1px solid @col;
+      padding:0 @g 0 @g;    
+    }
+    .active {
+      font-weight:bold;
+    }
+  }
+}
+
+.char {
+  float:left;
+  &:hover {
+    .survol
+  }
+  img {
+    width:100%;
+    height:100%;
+  }
+  min-width:@g*3;
+  min-height:@g*3;
+}
+.in {
+  display:inline;
+}
+.space {
+  display:inline-block;
+}
+.missing {
+  border-top:@col solid 4px;
+  font-weight:bold;
+  color:@col;
+  padding:@g;
+}
+.survol {
+  background:white;
+  .box-shadow(0, 0, 20px,@col,0px);
+}

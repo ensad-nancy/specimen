@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".char").draggable({stack:"div"}).resizable();$("header").css({top:$.cookie("palletteY"),left:$.cookie("palletteY")}).draggable({stop:function(e,t){$.cookie("paletteX",t.position.left,{path:"/",expires:7});$.cookie("paletteY",t.position.top,{path:"/",expires:7})}})});
