@@ -7,7 +7,7 @@
     <?php foreach($page->children()->visible() AS $p): ?>
     <li>
       <a href="<?php echo $p->url() ?>">
-      <?php echo fontize($p->title(),$p->uid(),60,"in") ?></a>
+      <?php echo fontize($p->title(),$p->uid(),100,"in") ?></a>
     </li>
     <?php endforeach ?>
     

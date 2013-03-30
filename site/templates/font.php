@@ -3,10 +3,8 @@
 
   <article>
     <h1><?php echo html($page->title()) ?></h1>
-    <?php echo kirbytext($page->text()) ?>
-    <?php echo kirbytext($page->type()) ?>
     <?php echo kirbytext($page->by()) ?>
-    <?php echo kirbytext($page->tags()) ?>
+    <?php echo str_replace(","," ",$page->tags()) ?>
     <hr>
     
     <?php foreach($page->children() as $c): ?>
@@ -17,7 +15,11 @@
       <?php endif ?>
     <?php endforeach ?>
     <hr>
-    <p><?php echo fontize("J ai vu un punk afghan et deux clowns aux zygomatiques incroyables",$page->uid(),60,"in") ?></p>
+    <p><?php echo fontize($page->pangramme(),$page->uid(),100,"in") ?></p>
+    
+    <hr>
+    
+    <p><?php echo fontize($page->text(),$page->uid(),40,"in") ?></p>
     
   </article>
 </section>
