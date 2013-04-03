@@ -204,6 +204,7 @@ marquee {
 }
 body {
   padding: 100px 20px 0 20px;
+  background: #808080;
 }
 a {
   color: #ff4747;
@@ -230,6 +231,7 @@ header {
 }
 header sup {
   font-size: 0.4em;
+  vertical-align: super;
 }
 header:hover {
   background: white;
@@ -240,14 +242,21 @@ header:hover {
   -ms-box-shadow: 0 0 20px 0px #ff4747;
   box-shadow: 0 0 20px 0px #ff4747;
 }
+header h1 {
+  text-align: center;
+}
 header nav {
   border-top: 1px solid #ff4747;
   padding: 10px 0;
 }
 header nav li {
-  display: inline;
+  width: 46px;
+  float: left;
   border-left: 1px solid #ff4747;
   padding: 0 10px 0 10px;
+}
+header nav li:first-child {
+  border: 0;
 }
 header nav .active {
   font-weight: bold;

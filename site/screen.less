@@ -1,12 +1,12 @@
 @import "gui";
 @import "baseline.reset.less";
 @col:#ff4747;
-@fond: #ebebeb;
+@fond:grey;
 @g : 10px;
 
 body {
   padding:10*@g 2*@g 0 2*@g;
-  //background:@fond;
+  background:@fond;
 }
 a {
   color:@col;
@@ -18,41 +18,40 @@ h1 {
   padding: 0 0 @g;
 }
 hr { border-top:@col 1px solid}
-li { list-style:none;
-}
+li { list-style:none;}
 header {
   width:200px;
-  
   position:absolute;
-  
   top:@g;
   right:@g;
-  
   z-index:800;
-  
   padding:@g;
   sup {
     font-size:0.4em;
+    vertical-align:super;
   }
   &:hover {
     .survol
   }
-  
+  h1 { text-align:center;}
   nav {
     border-top: 1px solid @col;
     padding: @g 0;
     
     li {
-      display:inline;
+      width:46px;
+      float:left;
       border-left: 1px solid @col;
-      padding:0 @g 0 @g;    
+      padding:0 @g 0 @g;
+      &:first-child {
+        border:0;
+      }
     }
     .active {
       font-weight:bold;
     }
   }
 }
-
 .char {
   float:left;
   &:hover {
