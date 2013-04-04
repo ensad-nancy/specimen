@@ -1,19 +1,19 @@
 id=MagickCache
 quantum-depth=16
 class=DirectClass  colors=0  matte=False
-columns=17  rows=76 depth=8
+columns=15  rows=28 depth=8
 colorspace=sRGB
 compression=Zip  quality=0
 units=PixelsPerCentimeter
 resolution=118.11x118.11
-page=1712x1216+339+275
+page=1712x1216+302+547
 tile-offset=+0+0
 rendering-intent=Perceptual
 gamma=0.45455
 red-primary=0.64,0.33  green-primary=0.3,0.6  blue-primary=0.15,0.06
 white-point=0.3127,0.329
-date:create=2013-04-04T13:19:02+02:00
-date:modify=2013-04-04T13:19:02+02:00
+date:create=2013-04-04T13:20:10+02:00
+date:modify=2013-04-04T13:20:10+02:00
 jpeg:colorspace=2
 jpeg:sampling-factor=2x2,1x1,1x1
 photoshop:Country=France
