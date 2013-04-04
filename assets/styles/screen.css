@@ -203,8 +203,11 @@ marquee {
   overflow: visible;
 }
 body {
-  padding: 100px 20px 0 20px;
+  padding: 10px 20px 0 20px;
   background: #ffffff;
+}
+.content {
+  max-width: 1020px;
 }
 a {
   color: #ff4747;
@@ -222,7 +225,7 @@ li {
   list-style: none;
 }
 header {
-  width: 200px;
+  width: 250px;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -250,8 +253,9 @@ header nav {
   padding: 10px 0;
 }
 header nav li {
-  width: 46px;
+  width: 62px;
   float: left;
+  text-align: center;
   border-left: 1px solid #ff4747;
   padding: 0 10px 0 10px;
 }
@@ -262,9 +266,7 @@ header nav .active {
   font-weight: bold;
 }
 .char {
-  float: left;
-  min-width: 30px;
-  min-height: 30px;
+  display: inline-block;
 }
 .char:hover {
   background: white;
@@ -299,4 +301,18 @@ header nav .active {
   -moz-box-shadow: 0 0 20px 0px #ff4747;
   -ms-box-shadow: 0 0 20px 0px #ff4747;
   box-shadow: 0 0 20px 0px #ff4747;
+}
+.on-print {
+  visibility: hidden;
+}
+@media print {
+  body {
+    padding: 0;
+  }
+  .no-print {
+    display: none;
+  }
+  .on-print {
+    visibility: visible;
+  }
 }

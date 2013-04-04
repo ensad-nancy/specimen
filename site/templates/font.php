@@ -15,11 +15,11 @@
       <?php endif ?>
     <?php endforeach ?>
     <hr>
-    <p><?php echo fontize($page->pangramme(),$page->uid(),100,"in") ?></p>
+    <p><?php echo fontize($page->pangramme(),$page->uid(),100,1,"in") ?></p>
     
     <hr>
     
-    <p><?php echo fontize($page->text(),$page->uid(),40,"in") ?></p>
+    <p><?php echo fontize($page->text(),$page->uid(),40,1,"in") ?></p>
     
   </article>
 </section>

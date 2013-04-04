@@ -1,5 +1,6 @@
 <?
-function fontize($txt,$font,$size,$class) {
+function fontize($txt,$font,$size,$def,$class) {
+  
   global $site;
   $pages = $site->pages();
   
@@ -14,10 +15,15 @@ function fontize($txt,$font,$size,$class) {
     $c = $pages->find("fonts/".$font."/".$char);
     
     if($c->hasImages()){
-      $res .= '<div class="'.$class.' '.$char.'">'.thumb($c->images()->last(), array('height' => $size)).'</div>';
+      
+      $ratio = round($c->images()->last()->width()/$c->images()->last()->height(),4);      
+      
+      $res .= '<div class="'.$class.' '.$char.'">
+        <img height="'.($size).'" width="'.(($size*$ratio)).'"src="'.thumb($c->images()->last(), array('height' => $size*$def), false).'" alt=""></div>';
+    
     }else {
       if($char == " "){
-        $res .= '<div class="'.$class.' '.$char.' space" style="width:'.($size*0.6).'px">&nbsp;</div>';
+        $res .= '<div class="'.$class.' '.$char.' space" style="width:'.(($size/$def)*0.6).'px">&nbsp;</div>';
       }else{
         $res .= '<div class="'.$class.' '.$char.' missing">'.$char.'</div>';
       }
