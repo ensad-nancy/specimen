@@ -237,7 +237,7 @@ header sup {
   vertical-align: super;
 }
 header:hover {
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
   filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0, Color=#ff4747);
   -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0, Color='#ff4747')";
   -webkit-box-shadow: 0 0 20px 0px #ff4747;
@@ -269,7 +269,7 @@ header nav .active {
   display: inline-block;
 }
 .char:hover {
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
   filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0, Color=#ff4747);
   -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0, Color='#ff4747')";
   -webkit-box-shadow: 0 0 20px 0px #ff4747;
@@ -286,6 +286,7 @@ header nav .active {
 }
 .space {
   display: inline-block;
+  background: white;
 }
 .missing {
   border-top: #ff4747 solid 4px;
@@ -294,7 +295,7 @@ header nav .active {
   padding: 10px;
 }
 .survol {
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
   filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0, Color=#ff4747);
   -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0, Color='#ff4747')";
   -webkit-box-shadow: 0 0 20px 0px #ff4747;

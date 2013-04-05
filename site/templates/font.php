@@ -2,7 +2,7 @@
 <section class="content">
 
   <article>
-    <h1><?php echo html($page->title()) ?></h1>
+    <h1><?php echo fontize($page->title(),$page->uid(),50,1,"in");?></h1>
     <?php echo kirbytext($page->by()) ?>
     <?php echo str_replace(","," ",$page->tags()) ?>
     <hr>

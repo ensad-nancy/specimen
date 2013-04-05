@@ -7,7 +7,7 @@ function fontize($txt,$font,$size,$def,$class) {
   $res ="";  
   
   // /[^a-z0-9 \-]+/i
-  $txt = strtolower(preg_replace("/[^a-z \-]+/i", "", $txt));
+  $txt = strtolower(preg_replace("/[^a-z !,''\-]+/i", "", $txt));
   $txt = str_split($txt);
   
   foreach($txt as $key => $char){

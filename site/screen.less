@@ -75,6 +75,7 @@ header {
 }
 .space {
   display:inline-block;
+  background:white;
 }
 .missing {
   border-top:@col solid 4px;
@@ -83,8 +84,8 @@ header {
   padding:@g;
 }
 .survol {
-  background:white;
-  .box-shadow(0, 0, 20px,@col,0px);
+  background:fadeout(white,20);
+  .box-shadow(0, 0, 20px,@col,0px); 
 }
 .on-print {
   visibility:hidden;
