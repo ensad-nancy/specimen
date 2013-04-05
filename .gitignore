@@ -7,3 +7,24 @@ docs
 /content copie
 *.cache
 *.mpc
+.DS_Store
+
+*.jpeg
+*.jpg
+*.png
+*.gif
+*.pdf
+*.zip
+*.tiff
+*.psd
+*.eps
+*.ai
+*.mpc*
+*.cache*
+
+/index.php
+/kirby
+/thumbs
+/site/cache
+/content
+/dcfvg.com.tmproj

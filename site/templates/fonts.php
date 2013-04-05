@@ -2,8 +2,6 @@
 <section class="content">
 
   <article>
-    <h1><?php echo html($page->title()) ?></h1>
-    
     <?php foreach($page->children()->visible() AS $p): ?>
     <li>
       <a href="<?php echo $p->url() ?>">
