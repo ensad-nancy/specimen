@@ -2,9 +2,7 @@
 panel/
 site/panel
 docs
-/content
 /specimen.tmproj
-/content copie
 *.cache
 *.mpc
 .DS_Store
@@ -26,5 +24,5 @@ docs
 /kirby
 /thumbs
 /site/cache
-/content
+/content*
 /dcfvg.com.tmproj
