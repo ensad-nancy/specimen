@@ -10,12 +10,12 @@
     <?php foreach($page->children() as $c): ?>
       <?php if($c->hasImages()): ?>
         <?php foreach($c->images() as $image): ?>
-          <?php echo thumb($image, array('height' => 150));?>
+          <?php echo thumb($image, array('height' => 50));?>
         <?php endforeach ?>
       <?php endif ?>
     <?php endforeach ?>
     <hr>
-    <p><?php echo fontize($page->pangramme(),$page->uid(),100,1,"in") ?></p>
+    <p><?php echo fontize($page->pangramme(),$page->uid(),70,2,"in") ?></p>
     
     <hr>
     

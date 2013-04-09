@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-  <title><?php echo html($site->title()) ?> - <?php echo html($page->title()) ?></title>
+  <title><?php // echo html($page->parent()->uid()) ?><?php echo html($site->title()) ?> - <?php echo html($page->title()) ?></title>
   <meta charset="utf-8" />
   <meta name="description" content="<?php echo html($site->description()) ?>" />
   <meta name="keywords" content="<?php echo html($site->keywords()) ?>" />

@@ -4,10 +4,10 @@ function fontize($txt,$font,$size,$def,$class) {
   global $site;
   $pages = $site->pages();
   
-  $res ="";  
+  $res ="";
+  $word="";
   
-  // /[^a-z0-9 \-]+/i
-  $txt = strtolower(preg_replace("/[^a-z !,''\-]+/i", "", $txt));
+  $txt = strtolower(preg_replace("/[^a-z !,'.'\-]+/i", "", $txt));
   $txt = str_split($txt);
   
   foreach($txt as $key => $char){
@@ -18,32 +18,32 @@ function fontize($txt,$font,$size,$def,$class) {
       
       $ratio = round($c->images()->last()->width()/$c->images()->last()->height(),4);      
       
-      $res .= '<div class="'.$class.' '.$char.'">
+      $word .= '<div class="'.$class.' '.$char.'">
         <img height="'.($size).'" width="'.(($size*$ratio)).'"src="'.thumb($c->images()->last(), array('height' => $size*$def), false).'" alt=""></div>';
     
     }else {
       if($char == " "){
-        $res .= '<div class="'.$class.' '.$char.' space" style="width:'.(($size/$def)*0.6).'px">&nbsp;</div>';
+        $word  .= '<div class="'.$class.' '.$char.' space" style="width:'.(($size/$def)*0.4).'px">&nbsp;</div>';
+        $res   .= '<div class="word">'.$word.'</div>';
+        $word   = "";
       }else{
-        $res .= '<div class="'.$class.' '.$char.' missing">'.$char.'</div>';
+        $word .= '<div class="'.$class.' '.$char.' missing">'.$char.'</div>';
       }
     }
-
   }
-  return $res;
+  $res .= $word;
+   
+  return '<div class="phrase">'.$res.'<div>';
 }
 function getFonts(){
-  
   global $site;
-  $pages = $site->pages();
   
+  $pages = $site->pages();
   $fonts = $pages->find("fonts")->children()->visible();
   
-  foreach($fonts as $key => $font){
-    $uid[] = $font->uid();
-  }
+  foreach($fonts as $key => $font) $uids[] = $font->uid();
   
-  return $uid;
+  return $uids;
 }
 function randFont(){
   $fonts = getFonts();

@@ -265,8 +265,11 @@ header nav li:first-child {
 header nav .active {
   font-weight: bold;
 }
-.char {
+.word {
   display: inline-block;
+}
+.phrase {
+  clear: both;
 }
 .char:hover {
   background: rgba(255, 255, 255, 0.8);
@@ -309,11 +312,15 @@ header nav .active {
 @media print {
   body {
     padding: 0;
+    margin: 0;
   }
   .no-print {
     display: none;
   }
   .on-print {
     visibility: visible;
+  }
+  .ui-icon {
+    background: none;
   }
 }

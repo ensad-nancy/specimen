@@ -2,7 +2,7 @@
 
 <section class="content">
   <article>    
-    <?php echo fontize($page->title().$page->text(),randfont(),60,9,"char") ?>
+    <?php echo fontize($page->title().$page->text(),randfont(),30,12,"char") ?>
   </article>
 </section>
 

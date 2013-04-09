@@ -58,8 +58,13 @@ header {
     }
   }
 }
+.word {
+    display:inline-block;
+}
+.phrase {
+  clear:both;
+}
 .char {
-  display:inline-block;
   &:hover {
     .survol
   }
@@ -91,12 +96,16 @@ header {
   visibility:hidden;
 }
 @media print {
-   body { padding:0; }
+   body { padding:0;margin:0; }
    
    .no-print {
      display:none;
    }
    .on-print {
      visibility:visible;
+   }
+   
+   .ui-icon {
+     background:none;
    }
  }
