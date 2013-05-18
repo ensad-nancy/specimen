@@ -16,7 +16,7 @@
 <body>
 
   <header>
-    <h1><a href="<?php echo url() ?>"><?= html($site->title()) ?></a>
+    <h1 class=".no-print"><a href="<?php echo url() ?>"><?= html($site->title()) ?></a>
       <sup class="no-print"><a href="/panel/<?php echo $_SERVER['REQUEST_URI'] ?>">[edit]</a></sup></BR>
       <sup ><a href="">ENSA-Nancy 2013</a></sup>
     </h1>

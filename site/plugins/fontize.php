@@ -33,7 +33,7 @@ function fontize($txt,$font,$size,$def,$class) {
   }
   $res .= $word;
    
-  return '<div class="phrase">'.$res.'<div>';
+  return '<div class="phrase">'.$res.'</div>';
 }
 function getFonts(){
   global $site;

@@ -265,6 +265,15 @@ header nav li:first-child {
 header nav .active {
   font-weight: bold;
 }
+article .gris {
+  width: 50%;
+  margin-right: 5%;
+  float: left;
+}
+article .motsclef {
+  float: left;
+  width: 20%;
+}
 .word {
   display: inline-block;
 }
