@@ -16,16 +16,17 @@
       <?php endforeach ?>
     </div>
     <hr>
-    <?php echo fontize($page->pangramme(),$page->uid(),90,2,"in") ?>
+    <?php echo fontize($page->pangramme(),$page->uid(),50,2,"in") ?>
     
     <hr>
+    <p class="motsclef">
+       <?php echo fontize(str_replace(","," - ",$page->tags()),$page->uid(),110,2,"in") ?>
     
     <div class="gris">
       <?php echo fontize($page->text(),$page->uid(),18,1,"in") ?>
       
     </div>
-    <p class="motsclef">
-       <?php echo str_replace(","," - ",$page->tags()) ?>
+
     </p>
   </article>
 </section>
